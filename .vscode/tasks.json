@@ -1,0 +1,48 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Linux Image",
+            "type": "shell",
+            "command": "docker pull debian:trixie-slim; docker build . -f linux.Dockerfile -t lacledeslan/gamesvr-qcde --no-cache --build-arg BUILDNODE=$env:computername;",
+            "dependsOn": "download-sub-modules",
+            "group": "build",
+            "problemMatcher": [],
+            "promptOnClose": true
+        },
+        {
+            "label": "Build & Run Interactive Server",
+            "type": "shell",
+            "command": "docker run -it --net=host lltest/gamesvr-qcde ggggg",
+            "dependsOn": "Build Linux Image",
+            "group": "build",
+            "problemMatcher": [],
+            "promptOnClose": true
+        },
+        {
+            "label": "Build & Shell In",
+            "type": "shell",
+            "command": "docker run -it --net=host --rm lltest/gamesvr-qcde;",
+            "dependsOn": "Build Linux Image",
+            "group": "build",
+            "problemMatcher": [],
+            "promptOnClose": true
+        },
+        {
+            "label": "Download git submodules",
+            "type": "shell",
+            "command": "git submodule foreach git pull origin master;",
+            "problemMatcher": [],
+            "promptOnClose": true
+        },
+        {
+            "label": "Update git submodules",
+            "type": "shell",
+            "command": "git submodule update --recursive --remote;",
+            "problemMatcher": [],
+            "promptOnClose": true
+        }
+    ]
+}
