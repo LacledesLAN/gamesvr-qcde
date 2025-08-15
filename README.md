@@ -2,9 +2,9 @@
 
 ![Quake Champions: Doom Edition](Documentation/media/qcde-720.png)
 
-[QC: Doom Edition](https://qcde.net/) is a mod that brings the weapons from the latest Quake game, into Doom, with
-delicious pixelated flavor. More than just weapons, it also brings the “Champions” mechanic -- different player classes,
-each one with unique status, speed, active and passive abilities.
+[QC:DE](https://qcde.net/) is a mod that brings the weapons from the latest Quake game, into Doom, with delicious
+pixelated flavor. More than just weapons, it also brings the “Champions” mechanic -- different player classes, each one
+with unique status, speed, active and passive abilities.
 
 QCDE is powered by [Q-Zandronum](https://qzandronum.com/) a modification of the Doom 2 engine that has Quake style
 movement.
