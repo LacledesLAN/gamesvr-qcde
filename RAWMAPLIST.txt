@@ -106,5 +106,10 @@ QCDL10 - Unreal Place (remake of Nicktest1 from UT4)
 QCDL11 - Fractal Reactor (very small map from UT99)
 QCME02 - Morpheus
 
-Halo maps
+Notable maps
+
+QCDE35  The edge
+QCME1 The longest yard
+
 QCDE34 - Zenith is based on the map with the same name from Halo 2
+QCDE42 - Minecraft
