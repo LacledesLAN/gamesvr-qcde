@@ -1,6 +1,6 @@
 # Quake Champions: Doom Edition Server in Docker
 
-![Quake Champions: Doom Edition](Documentation/media/qcde-720.png)
+![Quake Champions: Doom Edition](https://raw.githubusercontent.com/LacledesLAN/gamesvr-qcde/refs/heads/main/Documentation/media/qcde.png)
 
 [QC:DE](https://qcde.net/) is a mod that brings the weapons from the latest Quake game, into Doom, with delicious
 pixelated flavor. More than just weapons, it also brings the “Champions” mechanic -- different player classes, each one
