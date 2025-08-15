@@ -26,7 +26,7 @@ unclear or it has any issues please see [CONTRIBUTING.md](./CONTRIBUTING.md
 ### Download
 
 ```shell
-docker pull lacledeslan/gamesvr-gamesvr-qcde;
+docker pull lacledeslan/gamesvr-qcde;
 ```
 
 ### Run Self Tests
