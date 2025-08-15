@@ -23,12 +23,6 @@ unclear or it has any issues please see [CONTRIBUTING.md](./CONTRIBUTING.md
 
 [![linux/amd64](https://github.com/LacledesLAN/gamesvr-qcde/actions/workflows/build-linux-x64.yml/badge.svg)](https://github.com/LacledesLAN/gamesvr-qcde/actions/workflows/build-linux-x64.yml)
 
-### Download
-
-```shell
-docker pull lacledeslan/gamesvr-qcde;
-```
-
 ### Run Self Tests
 
 > TODO!
