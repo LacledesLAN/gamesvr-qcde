@@ -141,7 +141,8 @@ docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad fr
 
 ### Network Port
 
-By default, this server uses port 10666 (UDP). To modify, add the `-port #####` argument to the server at startup.
+By default, this server uses port 10666 (UDP). It can be changed by adding the `-port #####` argument to the server at
+startup. But, using Docker's port mapping would be the better solution.
 
 ## Getting Started with Game Servers in Docker
 
