@@ -10,7 +10,7 @@ The manual for QCDE can be found at [this link](https://qcde.net/files/public/QC
 This repository does not contain any WADS made by ID softaware, It uses the [Freedoom wads](https://freedoom.github.io/download.html) that comes with the inslation of QCDE.
 
 
-This repository is maintained by [Laclede's LAN](https://lacledeslan.com). Its contents are intended to be bare-bones and used as a stock server. For an example of building a customized server from this Docker image browse the related child-project [gamesvr-ut99-freeplay](https://github.com/LacledesLAN/gamesvr-qedm-freeplay). If any documentation is unclear or it has any issues please see [CONTRIBUTING.md](./CONTRIBUTING.md
+This repository is maintained by [Laclede's LAN](https://lacledeslan.com). Its contents are intended to be bare-bones and used as a stock server. For an example of building a customized server from this Docker image browse the related child-project [gamesvr-qcde-freeplay](https://github.com/LacledesLAN/gamesvr-qcde-freeplay). If any documentation is unclear or it has any issues please see [CONTRIBUTING.md](./CONTRIBUTING.md
 
 ### Download
 
