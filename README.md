@@ -6,18 +6,19 @@
 pixelated flavor. More than just weapons, it also brings the “Champions” mechanic -- different player classes, each one
 with unique status, speed, active and passive abilities.
 
-QCDE is powered by [Q-Zandronum](https://qzandronum.com/) a modification of the Doom 2 engine that has Quake style
-movement.
-
-The manual for QCDE can be found at [this link](https://qcde.net/files/public/QCDE_Manual.pdf).
-
-This repository does not contain any WADS made by *ID Software*, It uses the [Freedoom
-wads](https://freedoom.github.io/download.html) that comes with the installation of QCDE.
-
 This repository is maintained by [Laclede's LAN](https://lacledeslan.com). Its contents are intended to be bare-bones
 and used as a stock server. For an example of building a customized server from this Docker image browse the related
 child-project [gamesvr-qcde-freeplay](https://github.com/LacledesLAN/gamesvr-qcde-freeplay). If any documentation is
 unclear or it has any issues please see [CONTRIBUTING.md](./CONTRIBUTING.md
+
+## Links
+
+* [Official Quake Champions: Doom Edition Website](https://qcde.net)
+  * [QC:DE Manual](https://qcde.net/files/public/QCDE_Manual.pdf)
+* QCDE is powered by [Q-Zandronum](https://qzandronum.com/) a modification of the Doom 2 engine that has Quake style
+movement.
+* This server does not contain any closed-licensed assets made by *ID Software*, It uses the [Freedoom
+wads](https://freedoom.github.io/download.html) that comes with the installation of QCDE.
 
 ## Linux
 
