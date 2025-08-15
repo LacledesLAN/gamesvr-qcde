@@ -39,7 +39,7 @@ RUN apt-get update &&`
     apt-get clean &&`
     rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/* &&`
     useradd --home /app --gid root --system QCDE &&`
-    mkdir --parents /app /app/wads &&`
+    mkdir --parents /app /app/logs /app/wads &&`
     chown QCDE:root -R /app;
 
 COPY --chown=QCDE:root --from=downloader /output /app
