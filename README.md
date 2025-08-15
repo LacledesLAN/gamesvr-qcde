@@ -27,28 +27,121 @@ unclear or it has any issues please see [CONTRIBUTING.md](./CONTRIBUTING.md
 
 > TODO!
 
-### Run Interactive Server
+### Run Example Server
 
 This command is case sensitive on the file names.
 
 ```shell
-docker run -it --rm --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -port 10666 -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec /app/test.cfg;
+docker run -it --rm --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec test.cfg +exec LAN.cfg;
 ```
 
-### Selecting game mode
+### Running Game Servers
 
-QC:DE has multiple game modes, in order to select the correct game mode you want you just have to change the "+exec /app/server.cfg". With in the main folder there are config files for each mode to chose from. Just look for the files named "server-(gamemode).cfg".
+This server includes multiple configurations files. By executing these configuration, you can change the behavior and
+game mode of your server:
 
-| Gamemode                 | Server Config File       |
-|--------------------------|--------------------------|
-| Capture the Flag         | server-CTF.cfg           |
-| Deathmatch               | server-DM.cfg            |
-| Domination               | server-DOM.cfg           |
-| Duel                     | server-Duel.cfg          |
-| Instagib                 | server-Instagib.cfg      |
-| Last Man Standing        | server-LMS.cfg           |
-| Team Deathmatch          | server-TDM.cfg           |
-| Team Last Man Standing   | server-TLMS.cfg          |
+* One for each of QC:DE'S different game modes.
+* One for each networking mode:
+  * `LAN.cfg` for LAN servers.
+  * `INTERNET.cfg` for Internet servers.
+
+#### Capture the Flag
+
+In Capture The Flag (CTF), you and your team must pick up the flag from the other team's base, and carry the flag back
+to your team's flag to gain a point. Not only that, but you still have to defend your team's flag, and make sure that
+your flag carrier safely scores a point for the team. If the carrier dies while holding the flag, the flag will be
+dropped allowing enemies to pick it up and allies to return it back to base.
+
+```shell
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-ctf.cfg +exec LAN.cfg;
+```
+
+#### Deathmatch
+
+The classic game mode: simply shoot as many players as you see. The game ends when a player hits the frag limit, or the
+time limit is reached.
+
+```shell
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-dm.cfg +exec LAN.cfg;
+```
+
+#### Domination
+
+In Domination, there are various domination points around the map, indicated by a giant beam of light, for your teams to
+capture. If nobody is controlling the point, then the light is white. To take control of the point simply walk over it
+and it's yours! Every 3 seconds, your team receives 1 point for each point under your control.
+
+```shell
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-dom.cfg +exec LAN.cfg;
+```
+
+#### Duel
+
+Duel is effectively one-on-one Deathmatch. Two players fight against each other, while other players wait in line to
+play the winner. To win in a duel game, you must frag the other player until you reach the frag limit.
+
+```shell
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-duel.cfg +exec LAN.cfg;
+```
+
+#### InstaGib Deathmatch
+
+Deathmatch where everyone spawns with a railgun, with no other items spawning. The railgun is powerful enough that in
+one hit, it will instantly kill you with so much damage that you are gibbed (hence "instagib".)
+
+```shell
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-instagib-dm.cfg +exec LAN.cfg;
+```
+
+#### Invasion
+
+A co-operative game mode in which there are multiple increasingly difficult waves of monsters to fight.
+
+```shell
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-invasion.cfg +exec LAN.cfg;
+```
+
+#### Last Man Standing
+
+Last Man Standing (LMS) is similar to Deathmatch, but you have a limited amount of lives, and the goal is to be the last
+player alive. You receive all the weapons available, minus the BFG. In LMS, you gain points for being the last player
+alive for each round.
+
+```shell
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-lms.cfg +exec LAN.cfg;
+```
+
+#### Survival Cooperative
+
+A twist on co-operative in which each player has a set amount of lives. If you run out of lives, you can't respawn until
+the next map. If everyone runs out of lives, you lose and have to start again.
+
+```shell
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-survival.cfg +exec LAN.cfg;
+```
+
+#### Team Deathmatch
+
+Team Deathmatch takes Deathmatch and splits players into teams.
+
+```shell
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-tdm.cfg +exec LAN.cfg;
+```
+
+#### Team Last Man Standing
+
+Team Last Man Standing (TLMS) takes the rules of Last Man Standing and applies it to a team-based gamemode: the last
+team standing wins a point.
+
+```shell
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-tlms.cfg +exec LAN.cfg;
+```
+
+## Other Consideration
+
+### Network Port
+
+By default, this server uses port 10666 (UDP). To modify, add the `-port #####` argument to the server at startup.
 
 ## Getting Started with Game Servers in Docker
 
