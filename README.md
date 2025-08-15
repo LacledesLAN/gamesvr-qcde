@@ -1,4 +1,4 @@
-﻿﻿﻿# Quake Champions : Doom Edition Dedicated Server in Docker
+### Quake Champions : Doom Edition Dedicated Server in Docker
 
 ![Quake Champions: Doom Edition](.misc/qcde-720.png)
 
