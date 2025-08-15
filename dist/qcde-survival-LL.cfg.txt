@@ -1,0 +1,18 @@
+//
+// LacledesLAN Team Capture the Flag Configuration for QC:DE
+//
+// Team Deathmatch takes Deathmatch and splits players into teams
+//
+// A twist on co-operative in which each player has a set amount of lives. If you run out of lives, you cannot respawn until the
+// next map. If everyone runs out of lives, you lose and have to start again.
+//
+
+
+exec qcde-survival.cfg
+
+
+// Server Branding //////////////////////////////////////////////////
+sv_hostname "QC:DE LacledesLAN Survival"
+sv_hostemail "contact@lacledeslan.com"
+sv_website "https://lacledeslan.com/"
+sv_country "USA"
