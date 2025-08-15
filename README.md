@@ -18,7 +18,7 @@ unclear or it has any issues please see [CONTRIBUTING.md](./CONTRIBUTING.md
 * QCDE is powered by [Q-Zandronum](https://qzandronum.com/) a modification of the Doom 2 engine that has Quake style
 movement.
 * This server does not contain any closed-licensed assets made by *ID Software*, It uses the [Freedoom
-wads](https://freedoom.github.io/download.html) that comes with the installation of QCDE.
+wads](https://freedoom.github.io/download.html) that comes with the installation of *Q-Zandronum*.
 
 ## Linux
 
