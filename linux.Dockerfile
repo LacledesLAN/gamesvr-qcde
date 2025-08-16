@@ -15,8 +15,8 @@ RUN echo "Downloading QC:DE 3.0 Mod Files" &&`
 echo "Validating download against known hash" &&`
     echo "9dd89a5bbf7880e08b93005e8e3375896c2949e153bd987faccf4f2eedb0d013  /tmp/qcde.zip" | sha256sum -c - &&`
 echo "Extracting QC:DE" &&`
-    mkdir --parents /output/.config/zandronum &&`
-    unzip /tmp/qcde.zip -d /output/.config/zandronum;
+    mkdir --parents /output/wads &&`
+    unzip /tmp/qcde.zip -d /output/wads;
 
 COPY ./dist /output
 
