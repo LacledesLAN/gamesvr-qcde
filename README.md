@@ -49,6 +49,12 @@ game mode of your server:
   * `LAN.cfg` for LAN servers.
   * `INTERNET.cfg` for Internet servers.
 
+### Remote console (RCON)
+
+Remote console is avaialble through the Doomseeker client (Open QCDE Server browser). The main thing is that a Rcon password must be set. Due to all config files being available, its highly advised to add "+sv_rconpassword "testpass" ". To the end of your launch string.  
+
+
+
 #### Capture the Flag
 
 In Capture The Flag (CTF), you and your team must pick up the flag from the other team's base, and carry the flag back
