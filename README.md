@@ -51,9 +51,25 @@ game mode of your server:
 
 ### Remote console (RCON)
 
-Remote console is avaialble through the Doomseeker client (Open QCDE Server browser). The main thing is that a Rcon password must be set. Due to all config files being available, its highly advised to add "+sv_rconpassword "testpass" ". To the end of your launch string.  
+Remote console is avaialble through the Doomseeker client (Open QCDE Server browser). The main thing is that a Rcon password must be set. Due to all config files being available, its highly advised to add "+sv_rconpassword "testpass" ". To the end of your launch string.
 
 
+
+### Unreal Tournament Weapons, Movement, and music
+
+In order to set the server to exclusively use Unreal Tournament style movement, music and weapons (UT2k4) you will have to add the package files to the command line.
+
+* qcde_ut_weapons_v3.0.pk3 for UT weapons
+* qcde_ut_movement_v3.0.pk3 for UT movement
+* qcdemus_ut_3.0.pk3 for UT music
+
+Note: Every player class except Sarge will have UT style movement.
+
+An example of the command line would be as follows.
+
+```shell
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 qcde_ut_weapons_v3.0.pk3 qcde_ut_movement_v3.0.pk3  -optfile QCDEmus3.0.pk3 +exec qcde-dm.cfg +exec LAN.cfg;
+```
 
 #### Capture the Flag
 
