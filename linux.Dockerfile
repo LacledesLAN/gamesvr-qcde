@@ -3,10 +3,10 @@ FROM lacledeslan/steamcmd:linux AS downloader
 
 ARG contentServer=content.lacledeslan.net
 
-RUN echo "Downloading Q-Zandronum 1.4.20 for Linux (amd64)" &&`
-        curl -sSL "https://github.com/IgeNiaI/Q-Zandronum/releases/download/1.4.20/Q-Zandronum_1.4.20_Linux_amd64.tar.gz" -o /tmp/q-zandronum.tar.gz &&`
+RUN echo "Downloading Q-Zandronum 1.4.22 for Linux (amd64)" &&`
+        curl -sSL "https://github.com/IgeNiaI/Q-Zandronum/releases/download/1.4.22/Q-Zandronum_1.4.22_Linux_amd64.tar.gz" -o /tmp/q-zandronum.tar.gz &&`
     echo "Validating download against known hash" &&`
-        echo "de7e9c61a5b6d1237deb419e9fc4f33162446752a28eda6c17a236df9939530a  /tmp/q-zandronum.tar.gz" | sha256sum -c - &&`
+        echo "470c41bc6022bd8ec471de71b15b94589068abddd4e4276906c241da08e057a9  /tmp/q-zandronum.tar.gz" | sha256sum -c - &&`
     echo "Extracting Q-Zandronum" &&`
         tar -xzf /tmp/q-zandronum.tar.gz -C /output;
 
@@ -15,8 +15,8 @@ RUN echo "Downloading QC:DE 3.0 Mod Files" &&`
 echo "Validating download against known hash" &&`
     echo "9dd89a5bbf7880e08b93005e8e3375896c2949e153bd987faccf4f2eedb0d013  /tmp/qcde.zip" | sha256sum -c - &&`
 echo "Extracting QC:DE" &&`
-    mkdir --parents /output/wads &&`
-    unzip /tmp/qcde.zip -d /output/wads;
+    mkdir --parents /output/.config/zandronum &&`
+    unzip /tmp/qcde.zip -d /output/.config/zandronum;
 
 COPY ./dist /output
 
@@ -39,7 +39,7 @@ RUN apt-get update &&`
     apt-get clean &&`
     rm -rf /tmp/* /var/lib/apt/lists/* /var/tmp/* &&`
     useradd --home /app --gid root --system QCDE &&`
-    mkdir --parents /app /app/logs /app/wads &&`
+    mkdir --parents /app /app/wads &&`
     chown QCDE:root -R /app;
 
 COPY --chown=QCDE:root --from=downloader /output /app

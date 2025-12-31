@@ -15,7 +15,7 @@
         {
             "label": "Build & Run Interactive Server",
             "type": "shell",
-            "command": "docker run -it --net=host lltest/gamesvr-qcde ggggg",
+            "command": "docker run -it --net=host lltest/gamesvr-qcde;",
             "dependsOn": "Build Linux Image",
             "group": "build",
             "problemMatcher": [],
