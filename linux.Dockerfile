@@ -10,10 +10,10 @@ RUN echo "Downloading Q-Zandronum 1.4.22 for Linux (amd64)" &&`
     echo "Extracting Q-Zandronum" &&`
         tar -xzf /tmp/q-zandronum.tar.gz -C /output;
 
-RUN echo "Downloading QC:DE 3.0 Mod Files" &&`
-    curl -sSL "http://${contentServer}/fastDownloads/_installers/qcde/QCDE_v3.0.zip" -o /tmp/qcde.zip &&`
+RUN echo "Downloading QC:DE 3.1 Beta 2 Mod Files" &&`
+    curl -sSL "http://${contentServer}/fastDownloads/_installers/QCDEv3.1_beta_2.zip" -o /tmp/qcde.zip &&`
 echo "Validating download against known hash" &&`
-    echo "9dd89a5bbf7880e08b93005e8e3375896c2949e153bd987faccf4f2eedb0d013  /tmp/qcde.zip" | sha256sum -c - &&`
+    echo "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0  /tmp/qcde.zip" | sha256sum -c - &&`
 echo "Extracting QC:DE" &&`
     mkdir --parents /output/.config/zandronum &&`
     unzip /tmp/qcde.zip -d /output/.config/zandronum;
