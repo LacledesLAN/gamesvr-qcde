@@ -36,7 +36,7 @@ wads](https://freedoom.github.io/download.html) that comes with the installation
 This command is case sensitive on the file names.
 
 ```shell
-docker run -it --rm --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec test.cfg +exec LAN.cfg;
+docker run -it --rm --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-test.cfg +exec LAN.cfg;
 ```
 
 ### Running Game Servers
