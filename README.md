@@ -36,7 +36,7 @@ wads](https://freedoom.github.io/download.html) that comes with the installation
 This command is case sensitive on the file names.
 
 ```shell
-docker run -it --rm --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-test.cfg +exec LAN.cfg;
+docker run -it --rm --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.1_beta_2.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-test.cfg +exec LAN.cfg;
 ```
 
 ### Running Game Servers
@@ -68,7 +68,7 @@ Note: Every player class except Sarge will have UT style movement.
 An example of the command line would be as follows.
 
 ```shell
-docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 qcde_ut_weapons_v3.0.pk3 qcde_ut_movement_v3.0.pk3  -optfile QCDEmus3.0.pk3 +exec qcde-dm.cfg +exec LAN.cfg;
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.1_beta_2.pk3 QCDEmaps3.0.pk3 qcde_ut_weapons_v3.0.pk3 qcde_ut_movement_v3.0.pk3  -optfile QCDEmus3.0.pk3 +exec qcde-dm.cfg +exec LAN.cfg;
 ```
 
 #### Capture the Flag
@@ -79,7 +79,7 @@ your flag carrier safely scores a point for the team. If the carrier dies while 
 dropped allowing enemies to pick it up and allies to return it back to base.
 
 ```shell
-docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-ctf.cfg +exec LAN.cfg;
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.1_beta_2.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-ctf.cfg +exec LAN.cfg;
 ```
 
 #### Deathmatch
@@ -88,7 +88,7 @@ The classic game mode: simply shoot as many players as you see. The game ends wh
 time limit is reached.
 
 ```shell
-docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-dm.cfg +exec LAN.cfg;
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.1_beta_2.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-dm.cfg +exec LAN.cfg;
 ```
 
 #### Domination
@@ -98,7 +98,7 @@ capture. If nobody is controlling the point, then the light is white. To take co
 and it's yours! Every 3 seconds, your team receives 1 point for each point under your control.
 
 ```shell
-docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-dom.cfg +exec LAN.cfg;
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.1_beta_2.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-dom.cfg +exec LAN.cfg;
 ```
 
 #### Duel
@@ -107,7 +107,7 @@ Duel is effectively one-on-one Deathmatch. Two players fight against each other,
 play the winner. To win in a duel game, you must frag the other player until you reach the frag limit.
 
 ```shell
-docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-duel.cfg +exec LAN.cfg;
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.1_beta_2.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-duel.cfg +exec LAN.cfg;
 ```
 
 #### InstaGib Deathmatch
@@ -116,7 +116,7 @@ Deathmatch where everyone spawns with a railgun, with no other items spawning. T
 one hit, it will instantly kill you with so much damage that you are gibbed (hence "instagib".)
 
 ```shell
-docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-instagib-dm.cfg +exec LAN.cfg;
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.1_beta_2.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-instagib-dm.cfg +exec LAN.cfg;
 ```
 
 #### Invasion
@@ -124,7 +124,7 @@ docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad fr
 A co-operative game mode in which there are multiple increasingly difficult waves of monsters to fight.
 
 ```shell
-docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-invasion.cfg +exec LAN.cfg;
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.1_beta_2.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-invasion.cfg +exec LAN.cfg;
 ```
 
 #### Last Man Standing
@@ -134,7 +134,7 @@ player alive. You receive all the weapons available, minus the BFG. In LMS, you 
 alive for each round.
 
 ```shell
-docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-lms.cfg +exec LAN.cfg;
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.1_beta_2.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-lms.cfg +exec LAN.cfg;
 ```
 
 #### Survival Cooperative
@@ -143,7 +143,7 @@ A twist on co-operative in which each player has a set amount of lives. If you r
 the next map. If everyone runs out of lives, you lose and have to start again.
 
 ```shell
-docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-survival.cfg +exec LAN.cfg;
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.1_beta_2.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-survival.cfg +exec LAN.cfg;
 ```
 
 #### Team Deathmatch
@@ -151,7 +151,7 @@ docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad fr
 Team Deathmatch takes Deathmatch and splits players into teams.
 
 ```shell
-docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-tdm.cfg +exec LAN.cfg;
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.1_beta_2.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-tdm.cfg +exec LAN.cfg;
 ```
 
 #### Team Last Man Standing
@@ -160,7 +160,7 @@ Team Last Man Standing (TLMS) takes the rules of Last Man Standing and applies i
 team standing wins a point.
 
 ```shell
-docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.0.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-tlms.cfg +exec LAN.cfg;
+docker run -it --net=host lacledeslan/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.1_beta_2.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-tlms.cfg +exec LAN.cfg;
 ```
 
 ## Other Consideration

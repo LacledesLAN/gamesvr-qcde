@@ -11,12 +11,11 @@ RUN echo "Downloading Q-Zandronum 1.4.22 for Linux (amd64)" &&`
         tar -xzf /tmp/q-zandronum.tar.gz -C /output;
 
 RUN echo "Downloading QC:DE 3.1 Beta 2 Mod Files" &&`
-    curl -sSL "http://${contentServer}/fastDownloads/_installers/QCDEv3.1_beta_2.zip" -o /tmp/qcde.zip &&`
-echo "Validating download against known hash" &&`
-    echo "55f7d9e99b8e2d4e0e193b2f0275501e6d9c1ebd29cadbea6a0da48a8587e3e0  /tmp/qcde.zip" | sha256sum -c - &&`
-echo "Extracting QC:DE" &&`
-    mkdir --parents /output/.config/zandronum &&`
-    unzip /tmp/qcde.zip -d /output/.config/zandronum;
+        curl -sSL "http://${contentServer}/fastDownloads/_installers/qcde/QCDE_v3.1_beta2.tar.gz" -o /tmp/QCDE_v3.1_beta2.tar.gz &&`
+    echo "Validating download against known hash" &&`
+        echo "d805bbec1473f8aab34eae4f4810749085fd508b6b43a2efe03f3e7538824e31  /tmp/QCDE_v3.1_beta2.tar.gz" | sha256sum -c - &&`
+    echo "Extracting Q-C:DE wads" &&`
+        tar -xzf /tmp/QCDE_v3.1_beta2.tar.gz -C /output;
 
 COPY ./dist /output
 
@@ -27,8 +26,7 @@ HEALTHCHECK NONE
 ARG BUILDNODE=unspecified
 ARG SOURCE_COMMIT=unspecified
 
-ENV DOOMWADDIR=/app/wads `
-    LANG=en_US.UTF-8 `
+ENV LANG=en_US.UTF-8 `
     LANGUAGE=en_US.UTF-8 `
     LC_ALL=en_US.UTF-8
 

@@ -6,7 +6,7 @@
         {
             "label": "Build Linux Image",
             "type": "shell",
-            "command": "docker pull debian:trixie-slim; docker build . -f linux.Dockerfile -t lacledeslan/gamesvr-qcde --no-cache --build-arg BUILDNODE=$env:computername;",
+            "command": "docker pull debian:trixie-slim; docker build . -f linux.Dockerfile -t lltest/gamesvr-qcde --no-cache --build-arg BUILDNODE=$env:computername;",
             "dependsOn": "download-sub-modules",
             "group": "build",
             "problemMatcher": [],
@@ -15,7 +15,7 @@
         {
             "label": "Build & Run Interactive Server",
             "type": "shell",
-            "command": "docker run -it --net=host lltest/gamesvr-qcde;",
+            "command": "docker run -it --net=host lltest/gamesvr-qcde ./q-zandronum-server -iwad freedoom2.wad -file QCDEv3.1_beta_2.pk3 QCDEmaps3.0.pk3 -optfile QCDEmus3.0.pk3 +exec qcde-test.cfg +exec LAN.cfg;",
             "dependsOn": "Build Linux Image",
             "group": "build",
             "problemMatcher": [],
